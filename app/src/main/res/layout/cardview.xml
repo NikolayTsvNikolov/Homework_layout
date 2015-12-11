@@ -1,0 +1,299 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="380dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_margin="16dp">
+
+            <TextView
+                android:id="@+id/vth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VTHCharlie"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vth"
+                android:text="ABC12345678"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/ic_settings"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="8dp"
+                android:src="@drawable/probes_card_probe_settings" />
+
+            <ImageView
+                android:id="@+id/ic_battery"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="8dp"
+                android:layout_toLeftOf="@id/ic_settings"
+                android:src="@drawable/probes_card_batt_3" />
+
+            <ImageView
+                android:id="@+id/ic_sd"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="8dp"
+                android:layout_toLeftOf="@id/ic_battery"
+                android:src="@drawable/probes_card_sd_inserted" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/flow"
+                android:layout_width="48dp"
+                android:layout_height="64dp"
+                android:layout_marginLeft="64dp"
+                android:src="@drawable/meas_dial_flow" />
+
+            <TextView
+                android:id="@+id/txt_flow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/flow"
+                android:text="1234"
+                android:textColor="@android:color/black"
+                android:textSize="64dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_flow"
+                android:layout_centerHorizontal="true"
+                android:text="cfm"
+                android:textColor="@android:color/black"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:src="@drawable/probes_card_targetbtn" />
+
+            <TextView
+                android:id="@+id/txt_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="8dp"
+                android:text="36 in"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_toLeftOf="@id/txt_in"
+                android:src="@drawable/circle_icon" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_margin="8dp"
+            android:background="@android:color/darker_gray" />
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="96dp">
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="128dp"
+                        android:layout_height="256dp">
+
+                        <ImageView
+                            android:id="@+id/velocity"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginTop="16dp"
+                            android:src="@drawable/meas_dial_velocity" />
+
+                        <TextView
+                            android:id="@+id/txt_velocity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_toRightOf="@id/velocity"
+                            android:text="85"
+                            android:textSize="48dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/velocity"
+                            android:layout_marginLeft="64dp"
+                            android:layout_marginTop="4dp"
+                            android:text="ft/min" />
+
+                        <LinearLayout
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="8dp"
+                            android:background="@android:color/darker_gray" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="128dp"
+                        android:layout_height="256dp">
+
+                        <ImageView
+                            android:id="@+id/humidity"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginTop="16dp"
+                            android:src="@drawable/meas_dial_relhumidity" />
+
+                        <TextView
+                            android:id="@+id/txt_humidity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_toRightOf="@id/humidity"
+                            android:text="36"
+                            android:textSize="48dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/humidity"
+                            android:layout_marginLeft="64dp"
+                            android:layout_marginTop="4dp"
+                            android:text="% rh" />
+
+                        <LinearLayout
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="8dp"
+                            android:background="@android:color/darker_gray" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="128dp"
+                        android:layout_height="256dp">
+
+                        <ImageView
+                            android:id="@+id/temperture"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginTop="16dp"
+                            android:src="@drawable/meas_dial_temperature" />
+
+                        <TextView
+                            android:id="@+id/txt_temperture"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_toRightOf="@id/temperture"
+                            android:text="76"
+                            android:textSize="48dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/temperture"
+                            android:layout_marginLeft="64dp"
+                            android:layout_marginTop="4dp"
+                            android:text="F" />
+
+                        <LinearLayout
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="8dp"
+                            android:background="@android:color/darker_gray" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="128dp"
+                        android:layout_height="256dp">
+
+                        <ImageView
+                            android:id="@+id/pressure"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginTop="16dp"
+                            android:src="@drawable/meas_dial_barpressure" />
+
+                        <TextView
+                            android:id="@+id/txt_pressure"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_toRightOf="@id/pressure"
+                            android:text="85"
+                            android:textSize="48dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/pressure"
+                            android:layout_marginLeft="64dp"
+                            android:layout_marginTop="4dp"
+                            android:text="ft/min" />
+
+                        <LinearLayout
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="8dp"
+                            android:background="@android:color/darker_gray" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </HorizontalScrollView>
+        </ScrollView>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>
